@@ -72,11 +72,11 @@ const Education = () => {
           
           <div className="space-y-6">
             {education.map((edu, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0">
                     <div className="flex-1">
-                      <CardTitle className="text-xl text-foreground mb-2">{edu.degree}</CardTitle>
+                      <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors duration-300 mb-2">{edu.degree}</CardTitle>
                       <p className="text-lg text-primary font-semibold">{edu.institution}</p>
                     </div>
                     <div className="flex flex-col lg:items-end space-y-2">
@@ -111,7 +111,7 @@ const Education = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300 group">
+              <Card key={index} className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">

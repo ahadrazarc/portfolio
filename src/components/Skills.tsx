@@ -65,9 +65,6 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills and professional capabilities in computer vision, machine learning, and software development.
-          </p>
         </div>
 
         {/* Responsive Grid Layout */}

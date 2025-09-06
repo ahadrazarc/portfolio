@@ -40,9 +40,6 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
             Professional Experience
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            My professional journey in machine learning and software development.
-          </p>
         </div>
 
         <div>
@@ -50,12 +47,12 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <Card
                 key={index}
-                className="bg-card/50 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300"
+                className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1"
               >
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
                     <div>
-                      <CardTitle className="text-xl text-foreground">
+                      <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors duration-300">
                         {exp.title}
                       </CardTitle>
                       <p className="text-lg text-primary font-semibold">

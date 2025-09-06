@@ -58,28 +58,32 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-4 group">
-                  <div className="p-3 bg-gradient-logo rounded-lg group-hover:scale-110 transition-transform duration-300">
-                    <info.icon className="w-5 h-5 text-background" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm text-muted-foreground">{info.title}</p>
-                    {info.link ? (
-                      <a 
-                        href={info.link}
-                        className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {info.value}
-                      </a>
-                    ) : (
-                      <p className="text-foreground font-medium">{info.value}</p>
-                    )}
-                  </div>
-                </div>
+                <Card key={index} className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                        <info.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{info.title}</p>
+                        {info.link ? (
+                          <a 
+                            href={info.link}
+                            className="text-foreground hover:text-primary transition-colors duration-300 font-medium group-hover:text-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <p className="text-foreground font-medium group-hover:text-primary transition-colors">{info.value}</p>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
 

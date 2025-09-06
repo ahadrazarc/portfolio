@@ -1,6 +1,8 @@
 import { MapPin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   return (
@@ -8,14 +10,29 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-text bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-text bg-clip-text text-transparent">
             About Me
           </h2>
+          
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-12">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-xl opacity-75 animate-pulse"></div>
+              <Avatar className="relative w-64 h-64 ring-4 ring-primary/20 ring-offset-4 ring-offset-background">
+                <AvatarImage 
+                  src={profilePhoto} 
+                  alt="Abdul Ahad Raza - Computer Vision Engineer" 
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-4xl font-bold">AR</AvatarFallback>
+              </Avatar>
+            </div>
+          </div>
+
         </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* About Content */}
+        {/* Content */}
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
             {/* Info */}
             <div className="space-y-4">
@@ -71,16 +88,16 @@ const About = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-6 pt-8">
-              <Card className="bg-secondary/20 border border-border">
+              <Card className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
                 <CardContent className="p-6 text-center">
-                  <h4 className="text-2xl font-bold text-primary">2+</h4>
-                  <p className="text-muted-foreground">Years Experience</p>
+                  <h4 className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">2+</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors">Years Experience</p>
                 </CardContent>
               </Card>
-              <Card className="bg-secondary/20 border border-border">
+              <Card className="group bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
                 <CardContent className="p-6 text-center">
-                  <h4 className="text-2xl font-bold text-primary">10+</h4>
-                  <p className="text-muted-foreground">Projects Completed</p>
+                  <h4 className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">10+</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors">Projects Completed</p>
                 </CardContent>
               </Card>
             </div>

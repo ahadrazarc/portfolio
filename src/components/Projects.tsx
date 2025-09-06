@@ -49,9 +49,6 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
             Key Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Showcasing innovative computer vision and machine learning solutions that solve real-world problems through cutting-edge technology.
-          </p>
         </div>
 
         {/* Projects Grid */}
@@ -118,13 +115,19 @@ const Projects = () => {
                     </DialogContent>
                   </Dialog>
                   {project.title === "AI Based Fitness Training Android App" && (
-                    <Button 
-                      size="sm" 
-                      className="flex-1 bg-primary hover:bg-primary/90"
+                    <a 
+                      href="https://drive.google.com/drive/folders/18UhPyw16ksSxgTFToJoUQ6NDtUmNSyS5"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Play className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
+                      <Button 
+                        size="sm" 
+                        className="flex-1 bg-primary hover:bg-primary/90"
+                      >
+                        <Play className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </Button>
+                    </a>
                   )}
                 </div>
               </CardContent>
